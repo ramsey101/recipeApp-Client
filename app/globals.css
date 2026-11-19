@@ -561,3 +561,81 @@ a {
     border-radius: 16px;
   }
 }
+
+/* Recipe search */
+.recipe-search {
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.recipe-search-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.recipe-search-row {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe-search-row input {
+  flex: 1;
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid #dfe3d9;
+  border-radius: 9px;
+  outline: none;
+  color: var(--foreground);
+  background: #fff;
+  font: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.recipe-search-row input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(82 116 92 / 13%);
+}
+
+.recipe-search-clear {
+  flex-shrink: 0;
+  min-height: 46px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  background: var(--card);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.recipe-search-clear:hover {
+  color: var(--foreground);
+  border-color: #d3d6c9;
+}
+
+.recipe-search-summary {
+  max-width: 680px;
+  margin: -16px auto 24px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 600px) {
+  .recipe-search-row {
+    flex-wrap: wrap;
+  }
+
+  .recipe-search-row input {
+    flex-basis: 100%;
+  }
+
+  .recipe-search-row .submit-recipe-button {
+    flex: 1;
+    width: auto;
+  }
+}
